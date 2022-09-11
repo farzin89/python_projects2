@@ -33,6 +33,20 @@ print("people name that end with m ",list6)
 
 #...............................................
 
+# reverse
+
+def myRevers(list9):
+    tempList = []
+    for i in range(len(list9)-1,-1,-1):
+        tempList.append(list9[i])
+    return tempList
+
+list9 =[12,34,56,7,78,88,90,642]
+print("revers :",myRevers(list9))
+
+
+
+
 #list7 = []
 #for l in range(1,6):
 #    list7.append(int(input("Enter Number : ")))
