@@ -31,4 +31,24 @@ list5 = ["mehdi","ali","reza","ahmad","mohammad"]
 list6 = [k for k in list5 if "d"==k[-1]]
 print("people name that end with m ",list6)
 
+#...............................................
+
+#list7 = []
+#for l in range(1,6):
+#    list7.append(int(input("Enter Number : ")))
+#print(list7)
+
+#...............................................
+
+list8 =[]
+while True:
+    num = int(input("Enter Number : "))
+    if num < 0 :
+        break
+    if num not in list8:
+        3
+        list8.append(num)
+print(list8)
+
+
 
