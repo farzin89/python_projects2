@@ -24,6 +24,16 @@ class Wallet:
             currentNumber=self.cash.get(banknoteType)
             self.cash[banknoteType] = currentNumber + number
 
+    def takeBanknotesFromWallet(self,banknoteType,number):
+        if banknoteType not in self.cash:
+            print("Not Found")
+        else:
+            currentNumber = self.cash.get(banknoteType)
+            if currentNumber < number:
+                print("Error : There is not enough stock")
+            else:
+                self.cash[banknoteType] = currentNumber -  number
+
 
 
 
@@ -35,5 +45,8 @@ print(farzinWallet.cash)
 farzinWallet.putBanknotesInWallet(BanknoteType.USD5,3)
 print(farzinWallet.cash)
 farzinWallet.putBanknotesInWallet(BanknoteType.USD10,2)
+print(farzinWallet.cash)
+
+farzinWallet.takeBanknotesFromWallet(BanknoteType.USD10,5)
 print(farzinWallet.cash)
 
