@@ -33,6 +33,12 @@ class Wallet:
                 print("Error : There is not enough stock")
             else:
                 self.cash[banknoteType] = currentNumber -  number
+    def sumMoney(self,):
+        sum = 0
+        for key in self.cash.keys():
+            sum+= self.cash[key] * key.value
+        return sum
+
 
 
 
@@ -50,3 +56,4 @@ print(farzinWallet.cash)
 farzinWallet.takeBanknotesFromWallet(BanknoteType.USD10,5)
 print(farzinWallet.cash)
 
+print(farzinWallet.sumMoney())
