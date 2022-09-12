@@ -25,12 +25,16 @@ def playing(selectName,hideChar):
             break
     return count
 
-
+def printResult(count,len1):
+    if count < len1:
+        print("win")
+    else:
+        print('lose')
 names = filNameList()
 selectName = getRandomName(names)
 hideChar= hideCharForName(selectName)
 count = playing(selectName,hideChar)
-
+printResult(count,len(selectName))
 
 
 
