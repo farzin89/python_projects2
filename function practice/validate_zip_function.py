@@ -3,9 +3,9 @@
 def validate_zip_code(zipcode):
 
     if len(zipcode) == 5 and zipcode.isdigit():
-        print("your zip code is valid")
+        print("%s is valid zip code" %(zipcode))
     else:
-        print("your zip code is not valid")
+        print("%s is not valid zip code" %(zipcode))
 
 
 num =input("Enter your Zip code : ")
